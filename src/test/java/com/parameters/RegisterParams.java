@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 public class RegisterParams {
     public static void paramsSetValue(){
         //excel测试数据需要参数化的变量,开始赋值
-        GlobalSaveData.put("${username}", GeneralUtils.generateRandomUsername());
+        GlobalSaveData.put("${username}", "test_user001");
         GlobalSaveData.put("${password}", "123456");
         GlobalSaveData.put("${nickName}",GeneralUtils.generateRandomNickName() );
         GlobalSaveData.put("${note}", "自动化测试注册");

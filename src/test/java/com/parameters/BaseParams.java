@@ -11,6 +11,6 @@ import com.loggerutil.BaseLogger;
 public class BaseParams extends BaseLogger {
     public static void paramsSetValue(){
         //excel测试数据需要参数化的变量,开始赋值
-        GlobalSaveData.put("${ip}","http://129.28.122.208:8089");
+        GlobalSaveData.put("${ip}","http://127.0.0.1:8089");
     }
 }

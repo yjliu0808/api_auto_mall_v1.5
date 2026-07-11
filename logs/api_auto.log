@@ -1,253 +1,382 @@
-[2025-04-08 17:07:14] INFO  [BaseCase:42] - 📢 ==================【自动化测试开始】==================
-[2025-04-08 17:07:14] INFO  [BaseCase:42] - 📂 Excel路径: src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:14] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:16] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 3
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 🔢【用例编号】：1
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 📝【用例描述】：登录成功
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/admin/login
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - URL: ${ip}/admin/login
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - Params: {"username":"${username1}","password":"${password1}"}
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username1}';
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - Params: {"username":"test","password":"123456"}
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
-[2025-04-08 17:07:16] INFO  [DatabaseConnection:42] - 数据库驱动加载成功！
-[2025-04-08 17:07:16] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:16] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:16] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:16] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:16] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"test","password":"123456"}
-[2025-04-08 17:07:18] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer","tokenHeader":"Authorization","token":"eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc0NDEwMzIzODkyMywiZXhwIjoxNzQ0MTg5NjM4fQ.iS7BZY1nL86qCNb5MxF6e1gmovW_7nWPWn39RsMOwZ4X7o4tHHJAmKZrCttALoF2qd1hXnfJdmcVaSv6eL8Sfw"}}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 已提取变量：${token} = eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc0NDEwMzIzODkyMywiZXhwIjoxNzQ0MTg5NjM4fQ.iS7BZY1nL86qCNb5MxF6e1gmovW_7nWPWn39RsMOwZ4X7o4tHHJAmKZrCttALoF2qd1hXnfJdmcVaSv6eL8Sfw
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":200,"message":"操作成功","data":{"tokenHead":"Bearer","tokenHeader":"Authorization","token":"eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc0NDEwMzIzODkyMywiZXhwIjoxNzQ0MTg5NjM4fQ.iS7BZY1nL86qCNb5MxF6e1gmovW_7nWPWn39RsMOwZ4X7o4tHHJAmKZrCttALoF2qd1hXnfJdmcVaSv6eL8Sfw"}}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【执行语句】SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【请求前】343，【请求后】344
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】1 ✅
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌模块：登录功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌用例ID：1
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌描述：登录成功
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🔢【用例编号】：2
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📝【用例描述】：登录不成功：账号不正确
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🌐【接口地址】：http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"username":"${username2}","password":"${password2}"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:用户不存在"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username2}';
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"username":"testA","password":"123456"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:用户不存在"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'testA';
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"testA","password":"123456"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":500,"message":"登录异常:用户不存在","data":null}
-[2025-04-08 17:07:19] WARN  [BaseCase:45] - 未提取到值，jsonPath=$.data.token
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【期望JSON】{"code":500,"message":"登录异常:用户不存在"}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":500,"message":"登录异常:用户不存在","data":null}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【执行语句】SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'testA';
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【请求前】0，【请求后】0
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【预期差值】0，【实际差值】0 ✅
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌模块：登录功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌用例ID：2
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌描述：登录不成功：账号不正确
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🔢【用例编号】：3
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📝【用例描述】：登录不成功：密码不正确
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🌐【接口地址】：http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"username":"${username3}","password":"${password3}"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:密码不正确"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username3}';
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"username":"test","password":"1234567"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:密码不正确"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/login
-[2025-04-08 17:07:19] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"test","password":"1234567"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":500,"message":"登录异常:密码不正确","data":null}
-[2025-04-08 17:07:19] WARN  [BaseCase:45] - 未提取到值，jsonPath=$.data.token
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【期望JSON】{"code":500,"message":"登录异常:密码不正确"}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":500,"message":"登录异常:密码不正确","data":null}
-[2025-04-08 17:07:19] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【执行语句】SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【请求前】344，【请求后】344
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【预期差值】0，【实际差值】0 ✅
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌模块：登录功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌用例ID：3
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📌描述：登录不成功：密码不正确
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:19] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:19] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 1
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🧪【接口模块】：注册功能
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🔢【用例编号】：1
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 📝【用例描述】：注册成功
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/admin/register
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: ${ip}/admin/register
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"id":null,"username":"${username}","password":"${password}","nickName":"${nickName}","email":"${email}","note":"${note}","status":${status}}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_admin where username = "${username}";
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/register
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - Params: {"id":null,"username":"test04087dk","password":"123456","nickName":"张三AmO","email":"test0408SqF@qq.com","note":"自动化测试注册","status":1}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_admin where username = "test04087dk";
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:19] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:19] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/register
-[2025-04-08 17:07:19] INFO  [BaseCase:42] -  ➡️ 请求参数: {"id":null,"username":"test04087dk","password":"123456","nickName":"张三AmO","email":"test0408SqF@qq.com","note":"自动化测试注册","status":1}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":200,"message":"操作成功","data":{"id":148,"username":"test04087dk","password":"$2a$10$TV2lpo4YCWl99XE/5Y7/BObLxrHEaojBecPtWY/Y688GaJVMDf66W","icon":null,"email":"test0408SqF@qq.com","nickName":"张三AmO","note":"自动化测试注册","createTime":"2025-04-08T09:07:19.969+00:00","loginTime":null,"status":1}}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":200,"message":"操作成功","data":{"id":148,"username":"test04087dk","password":"$2a$10$TV2lpo4YCWl99XE/5Y7/BObLxrHEaojBecPtWY/Y688GaJVMDf66W","icon":null,"email":"test0408SqF@qq.com","nickName":"张三AmO","note":"自动化测试注册","createTime":"2025-04-08T09:07:19.969+00:00","loginTime":null,"status":1}}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【执行语句】SELECT count(*) from ums_admin where username = "test04087dk";
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【请求前】0，【请求后】1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】1 ✅
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌模块：注册功能
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌用例ID：1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌描述：注册成功
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:20] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:20] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🧪【接口模块】：用户角色功能
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🔢【用例编号】：1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📝【用例描述】：添加角色成功
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/role/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - URL: ${ip}/role/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - Params: {"id":null,"name":"${name}","description":"${description}","adminCount":${adminCount},"status":${status}}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_role where name = "${name}";
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/role/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - Params: {"id":null,"name":"自动化测试-test0408JEN","description":"自动化测试-test0408Gzy","adminCount":0,"status":0}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_role where name = "自动化测试-test0408JEN";
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/role/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] -  ➡️ 请求参数: {"id":null,"name":"自动化测试-test0408JEN","description":"自动化测试-test0408Gzy","adminCount":0,"status":0}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":200,"message":"操作成功","data":null}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":200,"message":"操作成功","data":null}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【执行语句】SELECT count(*) from ums_role where name = "自动化测试-test0408JEN";
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【请求前】0，【请求后】1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】1 ✅
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌模块：用户角色功能
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌用例ID：1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌描述：添加角色成功
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:20] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:20] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🧪【接口模块】：菜单功能
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🔢【用例编号】：1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📝【用例描述】：添加菜单成功
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/menu/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - --------------------------------------------------------
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 参数替换前：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - URL: ${ip}/menu/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - Params: {"title":"${title}","parentId":${parentId},"name":"${name}","icon":"${icon}","hidden":${hidden},"sort":${sort}}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_menu where title = "${title}";
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 参数替换后：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/menu/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - Params: {"title":"自动化测试菜单-test0408xpf","parentId":0,"name":"自动化测试前端名称-test0408jG4","icon":"sms","hidden":0,"sort":0}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_menu where title = "自动化测试菜单-test0408xpf";
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 发起请求：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/menu/create
-[2025-04-08 17:07:20] INFO  [BaseCase:42] -  ➡️ 请求参数: {"title":"自动化测试菜单-test0408xpf","parentId":0,"name":"自动化测试前端名称-test0408jG4","icon":"sms","hidden":0,"sort":0}
-[2025-04-08 17:07:20] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":200,"message":"操作成功","data":null}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":200,"message":"操作成功","data":null}
-[2025-04-08 17:07:20] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
-[2025-04-08 17:07:20] INFO  [DatabaseConnection:42] - 数据库连接成功！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🧾 SQL断言结果：
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【执行语句】SELECT count(*) from ums_menu where title = "自动化测试菜单-test0408xpf";
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【请求前】0，【请求后】1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】1 ✅
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 🎉 sql断言通过！
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ========================================================
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌模块：菜单功能
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌用例ID：1
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 📌描述：添加菜单成功
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - ====================【测试结束】====================
-[2025-04-08 17:07:20] INFO  [BatchWriteToExcel:42] - 准备批量写入 Excel，文件路径：src/test/resources/case_mall.xlsx
-[2025-04-08 17:07:20] INFO  [BatchWriteToExcel:42] - ✅ 所有用例执行完毕，批量回写 Excel 成功，共写入 12 条数据。
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 所有测试数据已成功写回 Excel。
-[2025-04-08 17:07:20] INFO  [BaseCase:42] - 本次测试总耗时：6.01 秒
+[2025-11-12 12:20:10] INFO  [BaseCase:42] - 📢 ==================【自动化测试开始】==================
+[2025-11-12 12:20:10] INFO  [BaseCase:42] - 📂 Excel路径: src/test/resources/case_mall.xlsx
+[2025-11-12 12:20:10] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
+[2025-11-12 12:20:11] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 3
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 🔢【用例编号】：1
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 📝【用例描述】：登录成功
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/admin/login
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - --------------------------------------------------------
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 参数替换前：
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - URL: ${ip}/admin/login
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - Params: {"username":"${username1}","password":"${password1}"}
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username1}';
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - 参数替换后：
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - URL: http://127.0.0.1:8089/admin/login
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - Params: {"username":"test","password":"123456"}
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:11] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
+[2025-11-12 12:20:11] INFO  [DatabaseConnection:42] - 数据库驱动加载成功！
+[2025-11-12 12:20:11] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:11] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:12] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:12] INFO  [BaseCase:42] - 发起请求：
+[2025-11-12 12:20:12] INFO  [BaseCase:42] - 【POST 请求】URL: http://127.0.0.1:8089/admin/login
+[2025-11-12 12:20:12] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"test","password":"123456"}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":200,"message":"操作成功","data":{"tokenHead":"Bearer","tokenHeader":"Authorization","token":"eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc2MjkyMTIxNDIyNSwiZXhwIjoxNzYzMDA3NjE0fQ.ilZ_5I7fWpLNkQirb98X3fv6QM1xIaF-Jf19HyZ20zMT4tqJs2jCY0ynLbZ1lwgr4C_S-R5f35Mt75M-8InSJw"}}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 已提取变量：${token} = eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc2MjkyMTIxNDIyNSwiZXhwIjoxNzYzMDA3NjE0fQ.ilZ_5I7fWpLNkQirb98X3fv6QM1xIaF-Jf19HyZ20zMT4tqJs2jCY0ynLbZ1lwgr4C_S-R5f35Mt75M-8InSJw
+[2025-11-12 12:20:14] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
+[2025-11-12 12:20:14] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:14] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":200,"message":"操作成功","data":{"tokenHead":"Bearer","tokenHeader":"Authorization","token":"eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX25hbWUiOiJ0ZXN0IiwiY3JlYXRlZCI6MTc2MjkyMTIxNDIyNSwiZXhwIjoxNzYzMDA3NjE0fQ.ilZ_5I7fWpLNkQirb98X3fv6QM1xIaF-Jf19HyZ20zMT4tqJs2jCY0ynLbZ1lwgr4C_S-R5f35Mt75M-8InSJw"}}
+[2025-11-12 12:20:14] INFO  [AssertResponseResult:42] - 🎉 响应断言通过！
+[2025-11-12 12:20:14] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:14] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:14] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 🧾 SQL断言结果：
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 【执行语句】SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 【请求前】59，【请求后】60
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】1 ✅
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 🎉 sql断言通过！
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - ========================================================
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 📌模块：登录功能
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 📌用例ID：1
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 📌描述：登录成功
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 🔢【用例编号】：2
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 📝【用例描述】：登录不成功：账号不正确
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 🌐【接口地址】：http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - --------------------------------------------------------
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 参数替换前：
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - Params: {"username":"${username2}","password":"${password2}"}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:用户不存在"}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username2}';
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 参数替换后：
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - Params: {"username":"testA","password":"123456"}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:用户不存在"}
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'testA';
+[2025-11-12 12:20:14] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:14] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:14] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 发起请求：
+[2025-11-12 12:20:14] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:14] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"testA","password":"123456"}
+[2025-11-12 12:20:35] ERROR [HttpRequest:49] - HTTP 请求发送失败: http://129.28.122.208:8089/admin/login
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:151)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.httprequest.HttpRequest.httpRequest(HttpRequest.java:41)
+	at com.testcase.BaseCase.sendRequest(BaseCase.java:195)
+	at com.testcase.BaseCase.executeTestCase(BaseCase.java:126)
+	at com.testcase.LoginCase.testLogin(LoginCase.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - ========================================================
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 📌模块：登录功能
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 📌用例ID：2
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 📌描述：登录不成功：账号不正确
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 🧪【接口模块】：登录功能
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 🔢【用例编号】：3
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 📝【用例描述】：登录不成功：密码不正确
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 🌐【接口地址】：http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - --------------------------------------------------------
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 参数替换前：
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - Params: {"username":"${username3}","password":"${password3}"}
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:密码不正确"}
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = '${username3}';
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 参数替换后：
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - Params: {"username":"test","password":"1234567"}
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - ExpectedResult: {"code":500,"message":"登录异常:密码不正确"}
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - SQL: SELECT COUNT(*) FROM ums_admin_login_log lJOIN ums_admin a ON l.admin_id = a.idWHERE a.username = 'test';
+[2025-11-12 12:20:35] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:35] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:35] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 发起请求：
+[2025-11-12 12:20:35] INFO  [BaseCase:42] - 【POST 请求】URL: http://129.28.122.208:8089/admin/login
+[2025-11-12 12:20:35] INFO  [BaseCase:42] -  ➡️ 请求参数: {"username":"test","password":"1234567"}
+[2025-11-12 12:20:56] ERROR [HttpRequest:49] - HTTP 请求发送失败: http://129.28.122.208:8089/admin/login
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:151)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.httprequest.HttpRequest.httpRequest(HttpRequest.java:41)
+	at com.testcase.BaseCase.sendRequest(BaseCase.java:195)
+	at com.testcase.BaseCase.executeTestCase(BaseCase.java:126)
+	at com.testcase.LoginCase.testLogin(LoginCase.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ========================================================
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌模块：登录功能
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌用例ID：3
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌描述：登录不成功：密码不正确
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
+[2025-11-12 12:20:56] INFO  [ReadExcel:42] - 成功加载Excel文件: src/test/resources/case_mall.xlsx
+[2025-11-12 12:20:56] INFO  [ReadExcel:42] - 读取Excel数据成功，记录条数: 1
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 🧪【接口模块】：注册功能
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 🔢【用例编号】：1
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📝【用例描述】：注册成功
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 🌐【接口地址】：${ip}/admin/register
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - --------------------------------------------------------
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 参数替换前：
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - URL: ${ip}/admin/register
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - Params: {"id":null,"username":"${username}","password":"${password}","nickName":"${nickName}","email":"${email}","note":"${note}","status":${status}}
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_admin where username = "${username}";
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 参数替换后：
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - URL: http://127.0.0.1:8089/admin/register
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - Params: {"id":null,"username":"test_user001","password":"123456","nickName":"Userrm5","email":"test1112grK@qq.com","note":"自动化测试注册","status":1}
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ExpectedResult: {"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - SQL: SELECT count(*) from ums_admin where username = "test_user001";
+[2025-11-12 12:20:56] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:56] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:56] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 发起请求：
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 【POST 请求】URL: http://127.0.0.1:8089/admin/register
+[2025-11-12 12:20:56] INFO  [BaseCase:42] -  ➡️ 请求参数: {"id":null,"username":"test_user001","password":"123456","nickName":"Userrm5","email":"test1112grK@qq.com","note":"自动化测试注册","status":1}
+[2025-11-12 12:20:56] INFO  [BaseCase:42] -  ⬅️ 响应结果: {"code":500,"message":"操作失败","data":null}
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - ❌ 断言失败 - 字段：code，期望值：200，实际值：500
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - ❌ 断言失败 - 字段：message，期望值：操作成功，实际值：操作失败
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - ✅ 响应断言结果：
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - 【期望JSON】{"code": 200,"message": "操作成功"}
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - 【实际响应 】{"code":500,"message":"操作失败","data":null}
+[2025-11-12 12:20:56] INFO  [AssertResponseResult:42] - ❌ 响应断言失败！
+[2025-11-12 12:20:56] INFO  [ReadProperties:42] - 开始加载配置文件：/database.properties
+[2025-11-12 12:20:56] INFO  [ReadProperties:42] - 成功读取配置文件：/database.properties
+[2025-11-12 12:20:56] INFO  [DatabaseConnection:42] - 数据库连接成功！
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 🧾 SQL断言结果：
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 【执行语句】SELECT count(*) from ums_admin where username = "test_user001";
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 【请求前】1，【请求后】1
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 【预期差值】1，【实际差值】0 ❌
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ========================================================
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌模块：注册功能
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌用例ID：1
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - 📌描述：注册成功
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ✅【用例执行完毕】========================================================
+[2025-11-12 12:20:56] INFO  [BaseCase:42] - ====================【测试结束】====================
+[2025-11-12 12:20:56] INFO  [BatchWriteToExcel:42] - 准备批量写入 Excel，文件路径：src/test/resources/case_mall.xlsx
+[2025-11-12 12:20:57] INFO  [BatchWriteToExcel:42] - ✅ 所有用例执行完毕，批量回写 Excel 成功，共写入 4 条数据。
+[2025-11-12 12:20:57] INFO  [BaseCase:42] - 所有测试数据已成功写回 Excel。
+[2025-11-12 12:20:57] INFO  [BaseCase:42] - 本次测试总耗时：46.76 秒
